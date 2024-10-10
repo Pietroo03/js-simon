@@ -24,4 +24,9 @@ buttonEl.addEventListener('click', function() {
     quattroEl.innerHTML = randomNumber[3]
     cinqueEl.innerHTML = randomNumber[4]
 
+    setTimeout (myFunction, 3000)
+        function myFunction() {
+            
+
+        }
 })
