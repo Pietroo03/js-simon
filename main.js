@@ -47,3 +47,18 @@ createButtonEl.addEventListener('click', function() {
             sendButtonEl.classList.remove('d-none')
         }
 })
+
+sendButtonEl.addEventListener('click', () => {
+
+    const valueOne = Number(inputOneEl.value)
+    const valueTwo = Number(inputTwoEl.value)
+    const valueThree = Number(inputThreeEl.value)
+    const valueFour = Number(inputFourEl.value)
+    const valueFive = Number(inputFiveEl.value)
+    
+    console.log(valueOne, valueTwo, valueThree, valueFour, valueFive);
+    
+
+    const counter = 0
+    
+})
