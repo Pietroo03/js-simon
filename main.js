@@ -5,6 +5,12 @@ const dueEl = document.getElementById('due')
 const treEl = document.getElementById('tre')
 const quattroEl = document.getElementById('quattro')
 const cinqueEl = document.getElementById('cinque')
+const inputOneEl = document.getElementById('inputOne')
+const inputTwoEl = document.getElementById('inputTwo')
+const inputThreeEl = document.getElementById('inputThree')
+const inputFourEl = document.getElementById('inputFour')
+const inputFiveEl = document.getElementById('inputFive')
+
 
 
 function random_generator() {
@@ -26,7 +32,15 @@ buttonEl.addEventListener('click', function() {
 
     setTimeout (myFunction, 3000)
         function myFunction() {
-            
-
+            unoEl.classList.add('d-none')
+            dueEl.classList.add('d-none')
+            treEl.classList.add('d-none')
+            quattroEl.classList.add('d-none')
+            cinqueEl.classList.add('d-none')
+            inputOneEl.classList.remove('d-none')
+            inputTwoEl.classList.remove('d-none')
+            inputThreeEl.classList.remove('d-none')
+            inputFourEl.classList.remove('d-none')
+            inputFiveEl.classList.remove('d-none')
         }
 })
