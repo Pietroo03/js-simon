@@ -1,28 +1,27 @@
 const buttonEl = document.querySelector('button')
-
-let first
-let second
-let third
-let fourth
-let fifth
-
-buttonEl.addEventListener('click', () => {
-    first = Math.floor(Math.random() * 10) + 1;
-    second = Math.floor(Math.random() * 10) + 1;
-    third = Math.floor(Math.random() * 10) + 1;
-    fourth = Math.floor(Math.random() * 10) + 1;
-    fifth = Math.floor(Math.random() * 10) + 1;
-
-    document.getElementById('first').innerHTML = first
-    document.getElementById('second').innerHTML = second
-    document.getElementById('third').innerHTML = third
-    document.getElementById('fourth').innerHTML = fourth
-    document.getElementById('fifth').innerHTML = fifth
-
-}) 
+const rowEl = document.getElementsByClassName('.row')
+const unoEl = document.getElementById('uno')
+const dueEl = document.getElementById('due')
+const treEl = document.getElementById('tre')
+const quattroEl = document.getElementById('quattro')
+const cinqueEl = document.getElementById('cinque')
 
 
+function random_generator() {
+    let number = []
+    for (let i = 0; i <= 5; i++) {
+        number[i] = Math.floor(Math.random() * 100) + 1
+    }
+    return number
+}
 
+buttonEl.addEventListener('click', function() {
+    let randomNumber = random_generator()
 
+    unoEl.innerHTML = randomNumber[0]
+    dueEl.innerHTML = randomNumber[1]
+    treEl.innerHTML = randomNumber[2]
+    quattroEl.innerHTML = randomNumber[3]
+    cinqueEl.innerHTML = randomNumber[4]
 
-
+})
