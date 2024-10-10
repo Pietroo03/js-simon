@@ -31,7 +31,7 @@ createButtonEl.addEventListener('click', function() {
     quattroEl.innerHTML = randomNumber[3]
     cinqueEl.innerHTML = randomNumber[4]
 
-    setTimeout (myFunction, 30000)
+    setTimeout (myFunction, 2000)
         function myFunction() {
             unoEl.classList.add('d-none')
             dueEl.classList.add('d-none')
