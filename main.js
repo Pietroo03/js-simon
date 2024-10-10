@@ -1,4 +1,4 @@
-const buttonEl = document.querySelector('button')
+const createButtonEl = document.getElementById('create-button')
 const rowEl = document.getElementsByClassName('.row')
 const unoEl = document.getElementById('uno')
 const dueEl = document.getElementById('due')
@@ -10,6 +10,7 @@ const inputTwoEl = document.getElementById('inputTwo')
 const inputThreeEl = document.getElementById('inputThree')
 const inputFourEl = document.getElementById('inputFour')
 const inputFiveEl = document.getElementById('inputFive')
+const sendButtonEl = document.getElementById('send-button')
 
 
 
@@ -21,7 +22,7 @@ function random_generator() {
     return number
 }
 
-buttonEl.addEventListener('click', function() {
+createButtonEl.addEventListener('click', function() {
     let randomNumber = random_generator()
 
     unoEl.innerHTML = randomNumber[0]
@@ -37,10 +38,12 @@ buttonEl.addEventListener('click', function() {
             treEl.classList.add('d-none')
             quattroEl.classList.add('d-none')
             cinqueEl.classList.add('d-none')
+            createButtonEl.classList.add('d-none')
             inputOneEl.classList.remove('d-none')
             inputTwoEl.classList.remove('d-none')
             inputThreeEl.classList.remove('d-none')
             inputFourEl.classList.remove('d-none')
             inputFiveEl.classList.remove('d-none')
+            sendButtonEl.classList.remove('d-none')
         }
 })
