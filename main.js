@@ -11,11 +11,11 @@ const inputThreeEl = document.getElementById('inputThree')
 const inputFourEl = document.getElementById('inputFour')
 const inputFiveEl = document.getElementById('inputFive')
 const sendButtonEl = document.getElementById('send-button')
+const resultEl = document.getElementById('result')
 
 
-
+let number = []
 function random_generator() {
-    let number = []
     for (let i = 0; i <= 5; i++) {
         number[i] = Math.floor(Math.random() * 100) + 1
     }
@@ -23,8 +23,8 @@ function random_generator() {
 }
 
 createButtonEl.addEventListener('click', function() {
+    
     let randomNumber = random_generator()
-
     unoEl.innerHTML = randomNumber[0]
     dueEl.innerHTML = randomNumber[1]
     treEl.innerHTML = randomNumber[2]
@@ -47,6 +47,7 @@ createButtonEl.addEventListener('click', function() {
             sendButtonEl.classList.remove('d-none')
         }
 })
+const numberGiven = []
 
 sendButtonEl.addEventListener('click', () => {
 
@@ -56,9 +57,22 @@ sendButtonEl.addEventListener('click', () => {
     const valueFour = Number(inputFourEl.value)
     const valueFive = Number(inputFiveEl.value)
     
-    console.log(valueOne, valueTwo, valueThree, valueFour, valueFive);
-    
+    numberGiven.push(valueOne)
+    numberGiven.push(valueTwo)
+    numberGiven.push(valueThree)
+    numberGiven.push(valueFour)
+    numberGiven.push(valueFive)
 
-    const counter = 0
+    /* console.log(valueOne, valueTwo, valueThree, valueFour, valueFive); */
+
+    let counter = 0
     
+    for (let i = 0; i <= number.length; i++) {
+        const element = numberGiven[i];
+        if (number.includes(element)) {
+            counter++ 
+        }
+        
+    }
+    console.log(counter);
 })
