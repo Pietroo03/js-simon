@@ -66,13 +66,17 @@ sendButtonEl.addEventListener('click', () => {
     /* console.log(valueOne, valueTwo, valueThree, valueFour, valueFive); */
 
     let counter = 0
-    
+    let guessedNumbers = []
+
     for (let i = 0; i <= number.length; i++) {
         const element = numberGiven[i];
         if (number.includes(element)) {
             counter++ 
-        }
-        
+            guessedNumbers.push(element)
+        } 
     }
     console.log(counter);
+    console.log(guessedNumbers);
+    
+    resultEl.innerHTML = `Hai indovinato ${counter} numeri: ${guessedNumbers}`
 })
